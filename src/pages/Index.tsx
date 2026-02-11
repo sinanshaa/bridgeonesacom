@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 import { FadeIn } from "@/components/FadeIn";
+import logo from "@/assets/logo.png";
 
 const services = [
   { icon: Building2, title: "Company Formation", desc: "End-to-end Saudi company registration and licensing support." },
@@ -46,6 +47,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--accent)/0.15),transparent_60%)]" />
         <div className="container-narrow relative flex min-h-[85vh] flex-col items-center justify-center py-20 text-center">
           <FadeIn>
+            <img src={logo} alt="BridgeOne.Com" className="mx-auto mb-8 h-24 md:h-28 w-auto" />
+          </FadeIn>
+          <FadeIn delay={50}>
             <div className="mb-6 inline-block rounded-full border border-accent/30 bg-accent/10 px-5 py-1.5 text-sm font-medium text-accent">
               Bridging Global Services
             </div>
