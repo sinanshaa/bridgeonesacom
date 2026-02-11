@@ -22,7 +22,7 @@
     --muted: 210 20% 94%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 41 47% 56%;
+    --accent: 120 50% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -43,7 +43,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --gold: 41 47% 56%;
+    --gold: 120 50% 30%;
     --gold-foreground: 0 0% 100%;
     --navy: 221 47% 20%;
     --navy-light: 221 35% 30%;
@@ -63,7 +63,7 @@
     --secondary-foreground: 210 25% 97%;
     --muted: 221 30% 16%;
     --muted-foreground: 215 20% 65%;
-    --accent: 41 47% 56%;
+    --accent: 120 50% 30%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;

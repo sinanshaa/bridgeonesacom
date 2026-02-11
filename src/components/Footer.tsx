@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -8,9 +9,7 @@ export const Footer = () => {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <h3 className="mb-4 text-lg font-heading font-bold">
-              Bridge<span className="text-accent">One</span>.Com
-            </h3>
+            <img src={logo} alt="BridgeOne.Com" className="mb-4 h-12 w-auto brightness-0 invert" />
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
               Bridging global opportunities with local aspirations. Expert business services across Saudi Arabia &amp; India.
             </p>
