@@ -29,7 +29,7 @@ const Contact = () => {
           <FadeIn>
             <h1 className="text-4xl font-heading font-bold md:text-5xl">Contact Us</h1>
             <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70 text-lg">
-              Get in touch with our team for personalized business consultation.
+              Get in touch with our team for personalized business consultation. Serving Saudi Arabia, UAE, all GCC countries &amp; India.
             </p>
           </FadeIn>
         </div>
@@ -61,10 +61,10 @@ const Contact = () => {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                       <Phone size={20} />
                     </div>
-                    <div>
+                     <div>
                       <h3 className="font-heading font-semibold text-foreground">Phone</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">+966 57 515 2994</p>
-                      <p className="text-sm text-muted-foreground">+91 8943 756 296</p>
+                      <p className="mt-1 text-sm text-muted-foreground">🇸🇦 +966 57 515 2994 <span className="text-xs text-muted-foreground/60">(Saudi / GCC)</span></p>
+                      <p className="text-sm text-muted-foreground">🇮🇳 +91 8943 756 296 <span className="text-xs text-muted-foreground/60">(India)</span></p>
                     </div>
                   </div>
 
