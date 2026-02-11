@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 import { FadeIn } from "@/components/FadeIn";
-import logo from "@/assets/logo-icon.png";
+import logo from "@/assets/logo-transparent.png";
 
 const services = [
   { icon: Building2, title: "Company Formation", desc: "End-to-end Saudi company registration and licensing support." },
@@ -44,33 +44,37 @@ const Index = () => {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--accent)/0.15),transparent_60%)]" />
-        <div className="container-narrow relative flex min-h-[85vh] flex-col items-center justify-center py-20 text-center">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--accent)/0.12),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(221_47%_30%/0.5),transparent_60%)]" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+        <div className="container-narrow relative flex min-h-[90vh] flex-col items-center justify-center py-20 text-center">
           <FadeIn>
-            <img src={logo} alt="BridgeOne.Com" className="mx-auto mb-8 h-24 md:h-28 w-auto" />
-          </FadeIn>
-          <FadeIn delay={50}>
-            <div className="mb-6 inline-block rounded-full border border-accent/30 bg-accent/10 px-5 py-1.5 text-sm font-medium text-accent">
-              Bridging Global Services
+            <div className="mb-8 flex items-center justify-center">
+              <img src={logo} alt="BridgeOne.Com" className="h-20 md:h-28 w-auto drop-shadow-[0_0_30px_hsl(var(--accent)/0.3)]" />
             </div>
           </FadeIn>
           <FadeIn delay={100}>
-            <h1 className="mx-auto max-w-4xl text-4xl font-heading font-bold leading-tight md:text-5xl lg:text-6xl">
-              Start Your Business in Saudi Arabia{" "}
-              <span className="text-accent">with Confidence</span>
+            <h1 className="mx-auto max-w-4xl text-4xl font-heading font-bold leading-tight tracking-tight md:text-5xl lg:text-7xl">
+              Start Your Business in{" "}
+              <span className="relative">
+                <span className="text-accent">Saudi Arabia</span>
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent/30 rounded-full" />
+              </span>
+              <br />
+              <span className="text-primary-foreground/90">with Confidence</span>
             </h1>
           </FadeIn>
           <FadeIn delay={200}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/70 md:text-xl">
+            <p className="mx-auto mt-8 max-w-2xl text-lg text-primary-foreground/60 md:text-xl leading-relaxed">
               Expert company formation, compliance, and business consulting across Saudi Arabia &amp; India. We bridge global opportunities with local expertise.
             </p>
           </FadeIn>
           <FadeIn delay={300}>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
               <Button
                 size="lg"
                 onClick={() => setDialogOpen(true)}
-                className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold text-base px-8"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold text-base px-10 py-6 shadow-lg shadow-accent/20"
               >
                 Get Free Consultation
               </Button>
@@ -78,13 +82,30 @@ const Index = () => {
                 size="lg"
                 variant="outline"
                 asChild
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-heading font-semibold text-base px-8"
+                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 font-heading font-semibold text-base px-10 py-6"
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </FadeIn>
+          <FadeIn delay={400}>
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-primary-foreground/40">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-accent" />
+                <span>100% Transparent</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-accent" />
+                <span>Saudi Market Experts</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={16} className="text-accent" />
+                <span>End-to-End Support</span>
+              </div>
+            </div>
+          </FadeIn>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-card to-transparent" />
       </section>
 
       {/* Introduction */}
