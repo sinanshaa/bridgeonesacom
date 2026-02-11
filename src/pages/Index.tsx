@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 import { FadeIn } from "@/components/FadeIn";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-icon.png";
 
 const services = [
   { icon: Building2, title: "Company Formation", desc: "End-to-end Saudi company registration and licensing support." },

@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConsultationDialog } from "./ConsultationDialog";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-icon.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -25,7 +25,10 @@ export const Navbar = () => {
       <header className="sticky top-0 z-50 border-b border-border/50 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
         <div className="container-narrow flex h-16 items-center justify-between md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="BridgeOne.Com" className="h-10 md:h-12 w-auto" />
+            <img src={logo} alt="BridgeOne.Com" className="h-9 md:h-11 w-auto" />
+            <span className="text-xl font-heading font-bold text-primary">
+              Bridge<span className="text-accent">One</span>.Com
+            </span>
           </Link>
 
           {/* Desktop */}
