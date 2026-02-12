@@ -22,11 +22,11 @@ export const Navbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
+      <header className="sticky top-0 z-50 border-b border-primary-foreground/10 bg-primary/95 backdrop-blur supports-[backdrop-filter]:bg-primary/90">
         <div className="container-narrow flex h-16 items-center justify-between md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="BridgeOne.Com" className="h-9 md:h-11 w-auto" />
-            <span className="text-xl font-heading font-bold text-primary">
+            <img src={logo} alt="BridgeOne.Com" className="h-9 md:h-11 w-auto brightness-0 invert" />
+            <span className="text-xl font-heading font-bold text-primary-foreground">
               Bridge<span className="text-accent">One</span>.Com
             </span>
           </Link>
@@ -40,7 +40,7 @@ export const Navbar = () => {
                 className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-accent ${
                   location.pathname === link.to
                     ? "text-accent"
-                    : "text-foreground/80"
+                    : "text-primary-foreground/80"
                 }`}
               >
                 {link.label}
@@ -59,7 +59,7 @@ export const Navbar = () => {
 
           {/* Mobile toggle */}
           <button
-            className="lg:hidden text-foreground"
+            className="lg:hidden text-primary-foreground"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -69,17 +69,17 @@ export const Navbar = () => {
 
         {/* Mobile menu */}
         {open && (
-          <div className="border-t border-border bg-card lg:hidden">
+          <div className="border-t border-primary-foreground/10 bg-primary lg:hidden">
             <nav className="container-narrow flex flex-col gap-1 py-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
                   onClick={() => setOpen(false)}
-                  className={`rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted ${
+                  className={`rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-primary-foreground/10 ${
                     location.pathname === link.to
-                      ? "text-accent bg-muted"
-                      : "text-foreground/80"
+                      ? "text-accent bg-primary-foreground/10"
+                      : "text-primary-foreground/80"
                   }`}
                 >
                   {link.label}
