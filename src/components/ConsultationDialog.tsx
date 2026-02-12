@@ -30,7 +30,7 @@ export const ConsultationDialog = ({ open, onOpenChange }: Props) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md border-accent/20">
         <DialogHeader>
           <DialogTitle className="font-heading text-xl">Get Free Consultation</DialogTitle>
           <DialogDescription>
@@ -57,7 +57,7 @@ export const ConsultationDialog = ({ open, onOpenChange }: Props) => {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold"
+            className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold gold-glow"
           >
             {loading ? "Submitting..." : "Submit Request"}
           </Button>

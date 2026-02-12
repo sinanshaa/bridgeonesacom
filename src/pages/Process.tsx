@@ -9,28 +9,28 @@ const steps = [
     icon: MessageSquare,
     num: "01",
     title: "Free Consultation",
-    desc: "Share your business goals with us. We'll assess your needs, explain the process, and provide a clear roadmap tailored to your objectives in Saudi Arabia.",
+    desc: "Share your business goals with us. We'll assess your needs, explain the process, and provide a clear roadmap.",
     details: ["Understand your business model", "Assess legal requirements", "Provide cost estimates", "Outline the complete timeline"],
   },
   {
     icon: FileCheck,
     num: "02",
     title: "Document Preparation",
-    desc: "Our team prepares all required documentation, ensures proper translation and attestation, and organizes every detail for a smooth submission process.",
+    desc: "Our team prepares all required documentation, ensures proper translation and attestation.",
     details: ["Gather required documents", "Certified legal translation", "Attestation & legalization", "Quality review & verification"],
   },
   {
     icon: Building,
     num: "03",
     title: "Government Processing",
-    desc: "We manage all interactions with Saudi government authorities — from MISA registration and commercial licenses to municipality approvals and chamber registration.",
+    desc: "We manage all interactions with Saudi government authorities — MISA, licenses, municipality approvals.",
     details: ["MISA registration", "License applications", "Commercial registration", "Municipality & chamber approvals"],
   },
   {
     icon: Rocket,
     num: "04",
-    title: "Business Launch & Ongoing Support",
-    desc: "Once your business is officially established, we continue supporting you with bank account setup, PRO services, and ongoing compliance assistance.",
+    title: "Business Launch & Support",
+    desc: "Once established, we continue supporting you with bank setup, PRO services, and compliance.",
     details: ["Corporate bank account opening", "Visa & work permit processing", "Ongoing PRO services", "Compliance monitoring"],
   },
 ];
@@ -40,25 +40,27 @@ const Process = () => {
 
   return (
     <>
-      <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container-narrow text-center">
+      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+        <div className="absolute inset-0 tech-grid opacity-20" />
+        <div className="container-narrow text-center relative">
           <FadeIn>
             <h1 className="text-4xl font-heading font-bold md:text-5xl">Our Process</h1>
-            <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70 text-lg">
+            <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-accent" />
+            <p className="mx-auto mt-4 max-w-2xl text-white/60 text-lg">
               A simple, transparent 4-step journey to launching your business in Saudi Arabia.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-padding bg-background">
         <div className="container-narrow">
           <div className="space-y-16">
             {steps.map((step, i) => (
               <FadeIn key={step.num} delay={i * 80}>
                 <div className={`flex flex-col gap-8 md:flex-row md:items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                   <div className="flex-1">
-                    <div className="mb-3 text-sm font-heading font-bold text-accent">STEP {step.num}</div>
+                    <div className="mb-3 inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-heading font-bold text-accent">STEP {step.num}</div>
                     <h2 className="text-2xl font-heading font-bold text-foreground">{step.title}</h2>
                     <p className="mt-3 text-muted-foreground leading-relaxed">{step.desc}</p>
                     <ul className="mt-4 space-y-2">
@@ -71,7 +73,7 @@ const Process = () => {
                     </ul>
                   </div>
                   <div className="flex flex-1 items-center justify-center">
-                    <div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-primary/5 text-primary">
+                    <div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B1F3A] to-[#1E3A8A] text-white shadow-xl shadow-[#0B1F3A]/20">
                       <step.icon size={56} strokeWidth={1.5} />
                     </div>
                   </div>
@@ -87,7 +89,7 @@ const Process = () => {
               <Button
                 size="lg"
                 onClick={() => setDialogOpen(true)}
-                className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold"
+                className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold gold-glow"
               >
                 Book Free Consultation
               </Button>

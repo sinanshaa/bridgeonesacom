@@ -5,24 +5,25 @@ import { FadeIn } from "@/components/FadeIn";
 const About = () => {
   return (
     <>
-      {/* Header */}
-      <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container-narrow text-center">
+      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+        <div className="absolute inset-0 tech-grid opacity-20" />
+        <div className="container-narrow text-center relative">
           <FadeIn>
             <h1 className="text-4xl font-heading font-bold md:text-5xl">About BridgeOne</h1>
-            <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70 text-lg">
+            <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-accent" />
+            <p className="mx-auto mt-4 max-w-2xl text-white/60 text-lg">
               Connecting entrepreneurs, investors, and professionals with reliable solutions across Saudi Arabia and India.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="section-padding bg-card">
+      <section className="section-padding bg-background">
         <div className="container-narrow">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-heading font-bold text-foreground">Our Story</h2>
+              <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
               <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
                 BridgeOne.Com was founded with a singular vision — to bridge the gap between global business opportunities and local aspirations. We recognized that entrepreneurs and investors seeking to establish their presence in Saudi Arabia often face complex regulatory environments, language barriers, and operational challenges. BridgeOne was created to eliminate these hurdles through professional consultancy, digital efficiency, and human-centered support.
               </p>
@@ -31,11 +32,10 @@ const About = () => {
         </div>
       </section>
 
-      {/* Vision & Mission */}
-      <section className="section-padding">
+      <section className="section-padding bg-muted/50">
         <div className="container-narrow grid gap-8 md:grid-cols-2">
           <FadeIn>
-            <Card className="h-full border-accent/20">
+            <Card className="h-full border-accent/20 transition-all hover:shadow-xl hover:shadow-accent/5">
               <CardContent className="p-8">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
                   <Eye size={24} />
@@ -48,7 +48,7 @@ const About = () => {
             </Card>
           </FadeIn>
           <FadeIn delay={100}>
-            <Card className="h-full border-accent/20">
+            <Card className="h-full border-accent/20 transition-all hover:shadow-xl hover:shadow-accent/5">
               <CardContent className="p-8">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 text-accent">
                   <Target size={24} />
@@ -66,11 +66,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* Approach */}
-      <section className="section-padding bg-card">
+      <section className="section-padding bg-background">
         <div className="container-narrow">
           <FadeIn>
             <h2 className="text-center text-3xl font-heading font-bold text-foreground">Our Approach</h2>
+            <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
           </FadeIn>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {[
@@ -92,11 +92,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* Global Presence */}
-      <section className="section-padding">
+      <section className="section-padding bg-muted/50">
         <div className="container-narrow">
           <FadeIn>
             <h2 className="text-center text-3xl font-heading font-bold text-foreground">Global Presence</h2>
+            <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
             <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
               Strategically positioned to serve clients across the GCC and South Asia
             </p>
@@ -107,9 +107,9 @@ const About = () => {
               { country: "India", city: "Multiple Cities", desc: "Regional support offices facilitating documentation, translation, and remote client services across India." },
             ].map((loc, i) => (
               <FadeIn key={loc.country} delay={i * 100}>
-                <Card className="border-border/50">
+                <Card className="border-border/50 transition-all hover:shadow-lg">
                   <CardContent className="flex gap-4 p-6">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#0B1F3A] to-[#1E3A8A] text-white">
                       <MapPin size={24} />
                     </div>
                     <div>
