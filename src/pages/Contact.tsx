@@ -24,25 +24,27 @@ const Contact = () => {
 
   return (
     <>
-      <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container-narrow text-center">
+      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+        <div className="absolute inset-0 tech-grid opacity-20" />
+        <div className="container-narrow text-center relative">
           <FadeIn>
             <h1 className="text-4xl font-heading font-bold md:text-5xl">Contact Us</h1>
-            <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/70 text-lg">
+            <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-accent" />
+            <p className="mx-auto mt-4 max-w-2xl text-white/60 text-lg">
               Get in touch with our team for personalized business consultation. Serving Saudi Arabia, UAE, all GCC countries &amp; India.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-padding bg-background">
         <div className="container-narrow">
           <div className="grid gap-12 lg:grid-cols-5">
-            {/* Contact Info */}
             <div className="lg:col-span-2">
               <FadeIn>
                 <h2 className="text-2xl font-heading font-bold text-foreground">Get in Touch</h2>
-                <p className="mt-3 text-muted-foreground leading-relaxed">
+                <div className="mt-2 h-1 w-12 rounded-full bg-accent" />
+                <p className="mt-4 text-muted-foreground leading-relaxed">
                   Reach out to us via phone, email, or visit our office. We're here to help you start your business journey.
                 </p>
 
@@ -61,7 +63,7 @@ const Contact = () => {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                       <Phone size={20} />
                     </div>
-                     <div>
+                    <div>
                       <h3 className="font-heading font-semibold text-foreground">Phone</h3>
                       <p className="mt-1 text-sm text-muted-foreground">🇸🇦 +966 57 515 2994 <span className="text-xs text-muted-foreground/60">(Saudi / GCC)</span></p>
                       <p className="text-sm text-muted-foreground">🇮🇳 +91 8943 756 296 <span className="text-xs text-muted-foreground/60">(India)</span></p>
@@ -81,10 +83,9 @@ const Contact = () => {
               </FadeIn>
             </div>
 
-            {/* Form */}
             <div className="lg:col-span-3">
               <FadeIn delay={100}>
-                <Card className="border-border/50">
+                <Card className="border-border/50 shadow-xl shadow-accent/5">
                   <CardContent className="p-6 md:p-8">
                     <h2 className="text-xl font-heading font-bold text-foreground">Send a Message</h2>
                     <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -115,7 +116,7 @@ const Contact = () => {
                       <Button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold"
+                        className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold gold-glow"
                       >
                         {loading ? "Sending..." : (
                           <>
@@ -130,9 +131,8 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map */}
           <FadeIn>
-            <div className="mt-16 overflow-hidden rounded-xl border border-border/50">
+            <div className="mt-16 overflow-hidden rounded-xl border border-border/50 shadow-lg">
               <iframe
                 title="BridgeOne Office Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6!2d46.72!3d24.66!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM5JzM2LjAiTiA0NsKwNDMnMTIuMCJF!5e0!3m2!1sen!2ssa!4v1234567890"
