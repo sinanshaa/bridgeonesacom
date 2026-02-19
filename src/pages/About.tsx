@@ -1,6 +1,7 @@
 import { Eye, Target, Lightbulb, Monitor, Heart, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { FadeIn } from "@/components/FadeIn";
+import logo from "@/assets/logo-bridgeone.png";
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <div className="absolute inset-0 tech-grid opacity-20" />
         <div className="container-narrow text-center relative">
           <FadeIn>
-            <h1 className="text-4xl font-heading font-bold md:text-5xl">About BridgeOne</h1>
+            <h1 className="text-4xl font-heading font-bold md:text-5xl">Who We Are</h1>
             <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-accent" />
             <p className="mx-auto mt-4 max-w-2xl text-white/60 text-lg">
               Connecting entrepreneurs, investors, and professionals with reliable solutions across Saudi Arabia and India.
@@ -22,10 +23,13 @@ const About = () => {
         <div className="container-narrow">
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center">
+                <img src={logo} alt="BridgeOne" className="h-20 w-auto" />
+              </div>
               <h2 className="text-3xl font-heading font-bold text-foreground">Our Story</h2>
               <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
               <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-                BridgeOne.Com was founded with a singular vision — to bridge the gap between global business opportunities and local aspirations. We recognized that entrepreneurs and investors seeking to establish their presence in Saudi Arabia often face complex regulatory environments, language barriers, and operational challenges. BridgeOne was created to eliminate these hurdles through professional consultancy, digital efficiency, and human-centered support.
+                BridgeOne is a growing technology company focused on robotics design, automation solutions, and engineering innovation. We specialize in Saudi business services, company formation consulting, and digital/online service facilitation, with a clear roadmap to expand into community-level services in India. Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
               </p>
             </div>
           </FadeIn>
