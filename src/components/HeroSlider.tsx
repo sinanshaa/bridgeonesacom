@@ -10,14 +10,14 @@ const slides = [
   {
     image: hero1,
     tag: "Bridging Global Services",
-    title: "Start Your Business in",
-    highlight: "Saudi Arabia",
-    subtitle: "with Confidence",
-    desc: "Expert company formation, compliance, and business consulting across Saudi Arabia & India.",
+    title: "Smart Robotics &",
+    highlight: "Engineering Solutions",
+    subtitle: "for the Future",
+    desc: "BridgeOne delivers innovative automation and engineering solutions designed for modern industries.",
   },
   {
     image: hero2,
-    tag: "Expert Consulting",
+    tag: "Innovation & Technology",
     title: "Professional",
     highlight: "Business Setup",
     subtitle: "& Compliance",
@@ -67,7 +67,6 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
             alt={slide.title}
             className="h-full w-full object-cover"
           />
-          {/* Dark gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-[#0B1F3A]/70 to-[#0B1F3A]/40" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/80 to-transparent" />
         </motion.div>
@@ -118,10 +117,13 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
                 <Button
                   size="lg"
                   variant="outline"
+                  asChild
                   className="border-white/20 text-white hover:bg-white/10 font-heading font-semibold text-base px-8 py-6"
                 >
-                  <Download size={18} className="mr-2" />
-                  Company Profile
+                  <a href="/BridgeOne-Profile.pdf" target="_blank" rel="noopener noreferrer">
+                    <Download size={18} className="mr-2" />
+                    Company Profile
+                  </a>
                 </Button>
               </div>
             </motion.div>

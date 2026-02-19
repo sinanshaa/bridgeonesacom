@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, ArrowRight } from "lucide-react";
-import logo from "@/assets/logo-new.png";
+import logo from "@/assets/logo-bridgeone.png";
 
 export const Footer = () => {
   return (
     <footer className="bg-[#060F1D] text-white relative overflow-hidden">
       <div className="absolute inset-0 tech-grid opacity-5" />
       
-      {/* Main footer */}
       <div className="container-narrow relative py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="BridgeOne.Com" className="h-12 w-auto brightness-0 invert" />
+              <img src={logo} alt="BridgeOne.Com" className="h-12 w-auto" />
               <span className="text-xl font-heading font-bold">
                 Bridge<span className="text-accent">One</span>.Com
               </span>
@@ -47,11 +46,9 @@ export const Footer = () => {
             <h4 className="mb-6 font-heading font-semibold text-accent text-sm uppercase tracking-widest">Quick Links</h4>
             <nav className="flex flex-col gap-3 text-sm text-white/40">
               {[
-                { to: "/about", label: "About Us" },
+                { to: "/about", label: "Who We Are" },
                 { to: "/services", label: "Services" },
-                { to: "/why-bridgeone", label: "Why BridgeOne" },
-                { to: "/process", label: "Our Process" },
-                { to: "/faq", label: "FAQ" },
+                { to: "/process", label: "Projects" },
                 { to: "/contact", label: "Contact" },
               ].map((l) => (
                 <Link key={l.to} to={l.to} className="group flex items-center gap-2 transition-colors hover:text-accent">
@@ -97,7 +94,6 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="container-narrow py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
           <span>© {new Date().getFullYear()} BridgeOne.Com — All rights reserved.</span>

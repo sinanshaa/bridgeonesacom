@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Building2, FileText, Users, Landmark, Languages, Monitor, ShieldCheck, Headphones, Globe, Zap, Heart, ArrowRight, Star, CheckCircle2, Target, Eye } from "lucide-react";
+import { Building2, FileText, Users, Landmark, Languages, Monitor, ShieldCheck, Headphones, Globe, Zap, Heart, ArrowRight, Star, CheckCircle2, Target, Eye, Lightbulb, Cpu, Wrench, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
 import { FadeIn } from "@/components/FadeIn";
 import { HeroSlider } from "@/components/HeroSlider";
+import logo from "@/assets/logo-bridgeone.png";
 
 const services = [
   { icon: Building2, title: "Company Formation", desc: "End-to-end Saudi company registration — MISA, CR, and licensing support." },
@@ -37,11 +38,11 @@ const testimonials = [
   { name: "Mohammed Al-Faisal", role: "Director, Gulf Investments", text: "From consultation to launch, BridgeOne delivered exactly what they promised. Highly recommended." },
 ];
 
-const stats = [
-  { value: "500+", label: "Companies Formed" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "15+", label: "Years Experience" },
-  { value: "6", label: "Countries Served" },
+const highlights = [
+  { icon: Lightbulb, label: "Innovative Startup in Business & Automation" },
+  { icon: Cpu, label: "Focused on Quality and Smart Engineering" },
+  { icon: Wrench, label: "Building Reliable Solutions for Modern Industries" },
+  { icon: TrendingUp, label: "Driven by Innovation and Technology" },
 ];
 
 const Index = () => {
@@ -49,18 +50,17 @@ const Index = () => {
 
   return (
     <>
-      {/* Hero Slider */}
       <HeroSlider onConsultation={() => setDialogOpen(true)} />
 
-      {/* Stats Bar */}
+      {/* Startup Highlights Bar (replaces stats) */}
       <section className="relative z-10 -mt-16">
         <div className="container-narrow">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden shadow-2xl shadow-black/20">
-            {stats.map((stat, i) => (
-              <FadeIn key={stat.label} delay={i * 100}>
-                <div className="bg-[#0B1F3A]/95 backdrop-blur-xl p-6 md:p-8 text-center border-r border-white/5 last:border-r-0">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-accent">{stat.value}</div>
-                  <div className="mt-1 text-sm text-white/50">{stat.label}</div>
+            {highlights.map((item, i) => (
+              <FadeIn key={item.label} delay={i * 100}>
+                <div className="bg-[#0B1F3A]/95 backdrop-blur-xl p-6 md:p-8 text-center border-r border-white/5 last:border-r-0 flex flex-col items-center gap-3">
+                  <item.icon size={28} className="text-accent" />
+                  <div className="text-sm font-medium text-white/70">{item.label}</div>
                 </div>
               </FadeIn>
             ))}
@@ -74,16 +74,16 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <div>
-                <span className="text-sm font-medium text-accent uppercase tracking-widest">About Us</span>
+                <span className="text-sm font-medium text-accent uppercase tracking-widest">Who We Are</span>
                 <h2 className="mt-3 text-3xl font-heading font-bold text-foreground md:text-5xl leading-tight">
-                  Who We Are
+                  About BridgeOne
                 </h2>
                 <div className="mt-4 h-1 w-16 rounded-full bg-accent" />
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                  BridgeOne.Com is an international business services company connecting entrepreneurs, investors, and professionals with reliable and transparent solutions across Saudi Arabia and India.
+                  BridgeOne is a growing technology company focused on robotics design, automation solutions, and engineering innovation. We specialize in Saudi business services, company formation consulting, and digital service facilitation.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
-                  We specialize in company formation, compliance support, business consulting, and digital service facilitation — bridging global opportunities with local expertise.
+                  Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-6">
                   <div className="flex items-start gap-3">
@@ -117,9 +117,9 @@ const Index = () => {
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                   <div className="h-full w-full bg-gradient-to-br from-[#0B1F3A] via-[#1E3A8A] to-[#0B1F3A] flex items-center justify-center relative">
                     <div className="absolute inset-0 tech-grid opacity-30" />
-                    <div className="text-center relative z-10">
-                      <div className="text-6xl font-heading font-bold text-accent">B1</div>
-                      <div className="mt-2 text-white/60 text-sm font-medium tracking-widest uppercase">Since 2009</div>
+                    <div className="text-center relative z-10 flex flex-col items-center gap-4">
+                      <img src={logo} alt="BridgeOne" className="h-24 w-auto" />
+                      <div className="text-white/60 text-sm font-medium tracking-widest uppercase">Bridging Global Services</div>
                     </div>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ const Index = () => {
       <section className="py-12 bg-background border-t border-border/50">
         <div className="container-narrow">
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
-            {["100% Transparent", "Saudi Market Experts", "End-to-End Support", "GCC & India", "15+ Years Experience"].map((item) => (
+            {["100% Transparent", "Saudi Market Experts", "End-to-End Support", "GCC & India", "Innovation Driven"].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-accent" />
                 <span>{item}</span>
