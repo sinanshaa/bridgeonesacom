@@ -8,7 +8,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "Who We Are" },
   { to: "/services", label: "Services" },
-  { to: "/process", label: "Projects" },
+  { to: "/process", label: "Process" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -34,7 +34,19 @@ export const Navbar = () => {
         }`}
       >
         <div className="container-narrow flex items-center justify-between">
-          {/* Left: Navigation Links */}
+          {/* Left: Logo + Company Name */}
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src={logo}
+              alt="BridgeOne.Com"
+              className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="text-xl font-heading font-bold text-primary">
+              Bridge<span className="text-accent">One</span>.Com
+            </span>
+          </Link>
+
+          {/* Right: Navigation Links */}
           <nav className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
               <Link
@@ -42,43 +54,31 @@ export const Navbar = () => {
                 to={link.to}
                 className={`relative rounded-md px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   location.pathname === link.to
-                    ? "text-[#1E3A8A]"
-                    : "text-[#0B1F3A]/70 hover:text-[#1E3A8A]"
+                    ? "text-accent"
+                    : "text-foreground/70 hover:text-accent"
                 }`}
               >
                 {link.label}
                 {location.pathname === link.to && (
-                  <span className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-[#1E3A8A]" />
+                  <span className="absolute bottom-0 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-full bg-accent" />
                 )}
               </Link>
             ))}
           </nav>
 
-          {/* Mobile toggle - left side */}
+          {/* Mobile toggle - right side */}
           <button
-            className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-[#0B1F3A]/10 text-[#0B1F3A] transition-colors hover:bg-[#0B1F3A]/5"
+            className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-muted"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
-
-          {/* Right: Logo + Company Name */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <span className="text-xl font-heading font-bold text-[#0B1F3A]">
-              Bridge<span className="text-[#1E3A8A]">One</span>.Com
-            </span>
-            <img
-              src={logo}
-              alt="BridgeOne.Com"
-              className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
-          </Link>
         </div>
 
         {/* Mobile menu */}
         {open && (
-          <div className="lg:hidden border-t border-[#0B1F3A]/10 bg-white">
+          <div className="lg:hidden border-t border-border bg-white">
             <nav className="container-narrow flex flex-col gap-1 py-6">
               {navLinks.map((link) => (
                 <Link
@@ -87,8 +87,8 @@ export const Navbar = () => {
                   onClick={() => setOpen(false)}
                   className={`rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                     location.pathname === link.to
-                      ? "text-[#1E3A8A] bg-[#1E3A8A]/5"
-                      : "text-[#0B1F3A]/70 hover:text-[#1E3A8A] hover:bg-[#1E3A8A]/5"
+                      ? "text-accent bg-accent/5"
+                      : "text-foreground/70 hover:text-accent hover:bg-accent/5"
                   }`}
                 >
                   {link.label}

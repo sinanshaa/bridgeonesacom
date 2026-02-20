@@ -24,7 +24,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white section-padding relative overflow-hidden">
         <div className="absolute inset-0 tech-grid opacity-20" />
         <div className="container-narrow text-center relative">
           <FadeIn>
@@ -42,7 +42,7 @@ const Contact = () => {
           <div className="grid gap-12 lg:grid-cols-5">
             <div className="lg:col-span-2">
               <FadeIn>
-                <h2 className="text-2xl font-heading font-bold text-foreground">Get in Touch</h2>
+                <h2 className="text-2xl font-heading font-bold text-primary">Get in Touch</h2>
                 <div className="mt-2 h-1 w-12 rounded-full bg-accent" />
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   Reach out to us via phone, email, or visit our office. We're here to help you start your business journey.
@@ -116,7 +116,7 @@ const Contact = () => {
                       <Button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold gold-glow"
+                        className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold green-glow"
                       >
                         {loading ? "Sending..." : (
                           <>

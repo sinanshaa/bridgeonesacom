@@ -4,7 +4,7 @@ import logo from "@/assets/logo-bridgeone.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#060F1D] text-white relative overflow-hidden">
+    <footer className="bg-primary text-white relative overflow-hidden">
       <div className="absolute inset-0 tech-grid opacity-5" />
       
       <div className="container-narrow relative py-20">
@@ -48,7 +48,7 @@ export const Footer = () => {
               {[
                 { to: "/about", label: "Who We Are" },
                 { to: "/services", label: "Services" },
-                { to: "/process", label: "Projects" },
+                { to: "/process", label: "Process" },
                 { to: "/contact", label: "Contact" },
               ].map((l) => (
                 <Link key={l.to} to={l.to} className="group flex items-center gap-2 transition-colors hover:text-accent">
