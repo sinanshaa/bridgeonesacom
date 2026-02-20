@@ -40,7 +40,7 @@ const Process = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white section-padding relative overflow-hidden">
         <div className="absolute inset-0 tech-grid opacity-20" />
         <div className="container-narrow text-center relative">
           <FadeIn>
@@ -61,7 +61,7 @@ const Process = () => {
                 <div className={`flex flex-col gap-8 md:flex-row md:items-center ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                   <div className="flex-1">
                     <div className="mb-3 inline-block rounded-full bg-accent/10 px-4 py-1 text-sm font-heading font-bold text-accent">STEP {step.num}</div>
-                    <h2 className="text-2xl font-heading font-bold text-foreground">{step.title}</h2>
+                    <h2 className="text-2xl font-heading font-bold text-primary">{step.title}</h2>
                     <p className="mt-3 text-muted-foreground leading-relaxed">{step.desc}</p>
                     <ul className="mt-4 space-y-2">
                       {step.details.map((d) => (
@@ -73,7 +73,7 @@ const Process = () => {
                     </ul>
                   </div>
                   <div className="flex flex-1 items-center justify-center">
-                    <div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0B1F3A] to-[#1E3A8A] text-white shadow-xl shadow-[#0B1F3A]/20">
+                    <div className="flex h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-white shadow-xl shadow-primary/20">
                       <step.icon size={56} strokeWidth={1.5} />
                     </div>
                   </div>
@@ -84,12 +84,12 @@ const Process = () => {
 
           <FadeIn>
             <div className="mt-20 text-center">
-              <h3 className="text-2xl font-heading font-bold text-foreground">Ready to Get Started?</h3>
+              <h3 className="text-2xl font-heading font-bold text-primary">Ready to Get Started?</h3>
               <p className="mt-3 text-muted-foreground">Begin with a free consultation — no obligations, no hidden fees.</p>
               <Button
                 size="lg"
                 onClick={() => setDialogOpen(true)}
-                className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold gold-glow"
+                className="mt-6 bg-accent text-accent-foreground hover:bg-accent/90 font-heading font-semibold green-glow"
               >
                 Book Free Consultation
               </Button>

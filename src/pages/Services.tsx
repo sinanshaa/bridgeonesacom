@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Building2, FileText, Users, Landmark, Languages, FolderCheck, CheckCircle2, Monitor } from "lucide-react";
+import { Building2, FileText, Users, Landmark, Languages, CheckCircle2, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
@@ -40,7 +40,7 @@ const services = [
     icon: Monitor,
     title: "Digital Business Services",
     desc: "Modern digital solutions for business operations, marketing, and growth.",
-    benefits: ["Digital transformation consulting", "Business process automation", "Online presence setup", "E-commerce enablement"],
+    benefits: ["Digital transformation consulting", "Business process optimization", "Online presence setup", "E-commerce enablement"],
   },
 ];
 
@@ -49,7 +49,7 @@ const Services = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white section-padding relative overflow-hidden">
         <div className="absolute inset-0 tech-grid opacity-20" />
         <div className="container-narrow text-center relative">
           <FadeIn>
@@ -69,7 +69,7 @@ const Services = () => {
               <Card className="overflow-hidden border-border/50 transition-all hover:shadow-xl hover:shadow-accent/5">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-5">
-                    <div className="flex flex-col justify-center bg-gradient-to-br from-[#0B1F3A]/5 to-[#1E3A8A]/5 p-8 md:col-span-2">
+                    <div className="flex flex-col justify-center bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:col-span-2">
                       <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent">
                         <service.icon size={28} />
                       </div>

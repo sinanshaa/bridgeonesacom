@@ -6,7 +6,7 @@ import logo from "@/assets/logo-bridgeone.png";
 const About = () => {
   return (
     <>
-      <section className="bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white section-padding relative overflow-hidden">
+      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white section-padding relative overflow-hidden">
         <div className="absolute inset-0 tech-grid opacity-20" />
         <div className="container-narrow text-center relative">
           <FadeIn>
@@ -26,10 +26,10 @@ const About = () => {
               <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center">
                 <img src={logo} alt="BridgeOne" className="h-20 w-auto" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-foreground">Our Story</h2>
+              <h2 className="text-3xl font-heading font-bold text-primary">Our Story</h2>
               <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
               <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-                BridgeOne is a growing technology company focused on robotics design, automation solutions, and engineering innovation. We specialize in Saudi business services, company formation consulting, and digital/online service facilitation, with a clear roadmap to expand into community-level services in India. Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
+                BridgeOne is a growing business service company focused on helping entrepreneurs and organizations establish and manage their operations in Saudi Arabia. We provide reliable consulting, documentation support, and digital service solutions to ensure a smooth and compliant business setup experience. Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
               </p>
             </div>
           </FadeIn>
@@ -73,7 +73,7 @@ const About = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <FadeIn>
-            <h2 className="text-center text-3xl font-heading font-bold text-foreground">Our Approach</h2>
+            <h2 className="text-center text-3xl font-heading font-bold text-primary">Our Approach</h2>
             <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
           </FadeIn>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -99,7 +99,7 @@ const About = () => {
       <section className="section-padding bg-muted/50">
         <div className="container-narrow">
           <FadeIn>
-            <h2 className="text-center text-3xl font-heading font-bold text-foreground">Global Presence</h2>
+            <h2 className="text-center text-3xl font-heading font-bold text-primary">Global Presence</h2>
             <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
             <p className="mx-auto mt-4 max-w-xl text-center text-muted-foreground">
               Strategically positioned to serve clients across the GCC and South Asia
@@ -113,7 +113,7 @@ const About = () => {
               <FadeIn key={loc.country} delay={i * 100}>
                 <Card className="border-border/50 transition-all hover:shadow-lg">
                   <CardContent className="flex gap-4 p-6">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#0B1F3A] to-[#1E3A8A] text-white">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-secondary text-white">
                       <MapPin size={24} />
                     </div>
                     <div>

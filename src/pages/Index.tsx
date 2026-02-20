@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Building2, FileText, Users, Landmark, Languages, Monitor, ShieldCheck, Headphones, Globe, Zap, Heart, ArrowRight, Star, CheckCircle2, Target, Eye, Lightbulb, Cpu, Wrench, TrendingUp } from "lucide-react";
+import { Building2, FileText, Users, Landmark, Languages, Monitor, ShieldCheck, Headphones, Globe, Zap, Heart, ArrowRight, Star, CheckCircle2, Target, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ConsultationDialog } from "@/components/ConsultationDialog";
@@ -39,10 +39,10 @@ const testimonials = [
 ];
 
 const highlights = [
-  { icon: Lightbulb, label: "Innovative Startup in Business & Automation" },
-  { icon: Cpu, label: "Focused on Quality and Smart Engineering" },
-  { icon: Wrench, label: "Building Reliable Solutions for Modern Industries" },
-  { icon: TrendingUp, label: "Driven by Innovation and Technology" },
+  { label: "Reliable & Transparent Service" },
+  { label: "Expert Guidance for Saudi Business Setup" },
+  { label: "Fast & Hassle-Free Processing" },
+  { label: "Dedicated Client Support" },
 ];
 
 const Index = () => {
@@ -52,15 +52,15 @@ const Index = () => {
     <>
       <HeroSlider onConsultation={() => setDialogOpen(true)} />
 
-      {/* Startup Highlights Bar (replaces stats) */}
+      {/* Credibility Bar */}
       <section className="relative z-10 -mt-16">
         <div className="container-narrow">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden shadow-2xl shadow-black/20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden shadow-2xl shadow-black/10">
             {highlights.map((item, i) => (
               <FadeIn key={item.label} delay={i * 100}>
-                <div className="bg-[#0B1F3A]/95 backdrop-blur-xl p-6 md:p-8 text-center border-r border-white/5 last:border-r-0 flex flex-col items-center gap-3">
-                  <item.icon size={28} className="text-accent" />
-                  <div className="text-sm font-medium text-white/70">{item.label}</div>
+                <div className="bg-primary/95 backdrop-blur-xl p-6 md:p-8 text-center border-r border-white/5 last:border-r-0 flex flex-col items-center gap-3">
+                  <CheckCircle2 size={24} className="text-accent" />
+                  <div className="text-sm font-medium text-white/80">{item.label}</div>
                 </div>
               </FadeIn>
             ))}
@@ -75,12 +75,12 @@ const Index = () => {
             <FadeIn>
               <div>
                 <span className="text-sm font-medium text-accent uppercase tracking-widest">Who We Are</span>
-                <h2 className="mt-3 text-3xl font-heading font-bold text-foreground md:text-5xl leading-tight">
+                <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl leading-tight">
                   About BridgeOne
                 </h2>
                 <div className="mt-4 h-1 w-16 rounded-full bg-accent" />
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                  BridgeOne is a growing technology company focused on robotics design, automation solutions, and engineering innovation. We specialize in Saudi business services, company formation consulting, and digital service facilitation.
+                  BridgeOne is a growing business service company focused on helping entrepreneurs and organizations establish and manage their operations in Saudi Arabia. We provide reliable consulting, documentation support, and digital service solutions.
                 </p>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
                   Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
@@ -92,7 +92,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h4 className="font-heading font-semibold text-foreground text-sm">Our Mission</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Simplify global business expansion</p>
+                      <p className="text-xs text-muted-foreground mt-1">Simplify Saudi business expansion</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -115,7 +115,7 @@ const Index = () => {
             <FadeIn delay={200}>
               <div className="relative">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                  <div className="h-full w-full bg-gradient-to-br from-[#0B1F3A] via-[#1E3A8A] to-[#0B1F3A] flex items-center justify-center relative">
+                  <div className="h-full w-full bg-gradient-to-br from-primary via-secondary to-primary flex items-center justify-center relative">
                     <div className="absolute inset-0 tech-grid opacity-30" />
                     <div className="text-center relative z-10 flex flex-col items-center gap-4">
                       <img src={logo} alt="BridgeOne" className="h-24 w-auto" />
@@ -124,7 +124,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-xl bg-accent/20 blur-2xl" />
-                <div className="absolute -top-4 -left-4 h-32 w-32 rounded-xl bg-[#1E3A8A]/30 blur-3xl" />
+                <div className="absolute -top-4 -left-4 h-32 w-32 rounded-xl bg-secondary/30 blur-3xl" />
               </div>
             </FadeIn>
           </div>
@@ -132,9 +132,8 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="section-padding bg-[#0B1F3A] text-white relative overflow-hidden">
+      <section className="section-padding bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 tech-grid opacity-10" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(220_60%_25%/0.3),transparent_70%)]" />
         <div className="container-narrow relative">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto">
@@ -148,7 +147,7 @@ const Index = () => {
             {services.map((s, i) => (
               <FadeIn key={s.title} delay={i * 80}>
                 <div className="group relative h-full rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 transition-all duration-500 hover:border-accent/30 hover:bg-white/10 hover:-translate-y-2 hover:shadow-xl hover:shadow-accent/5">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 text-accent transition-all duration-300 group-hover:from-accent group-hover:to-accent/80 group-hover:text-accent-foreground group-hover:shadow-lg group-hover:shadow-accent/20">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 text-accent transition-all duration-300 group-hover:from-accent group-hover:to-accent/80 group-hover:text-white group-hover:shadow-lg group-hover:shadow-accent/20">
                     <s.icon size={26} />
                   </div>
                   <h3 className="mb-3 font-heading text-lg font-semibold text-white">{s.title}</h3>
@@ -178,7 +177,7 @@ const Index = () => {
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto">
               <span className="text-sm font-medium text-accent uppercase tracking-widest">Why Us</span>
-              <h2 className="mt-3 text-3xl font-heading font-bold text-foreground md:text-5xl">Why Choose BridgeOne</h2>
+              <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl">Why Choose BridgeOne</h2>
               <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
               <p className="mt-4 text-muted-foreground">What sets us apart in business consulting</p>
             </div>
@@ -202,7 +201,7 @@ const Index = () => {
       </section>
 
       {/* Process */}
-      <section className="section-padding bg-gradient-to-br from-[#0B1F3A] via-[#112d55] to-[#1E3A8A] text-white relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-br from-primary via-secondary to-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 tech-grid opacity-10" />
         <div className="container-narrow relative">
           <FadeIn>
@@ -238,7 +237,7 @@ const Index = () => {
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto">
               <span className="text-sm font-medium text-accent uppercase tracking-widest">Testimonials</span>
-              <h2 className="mt-3 text-3xl font-heading font-bold text-foreground md:text-5xl">What Our Clients Say</h2>
+              <h2 className="mt-3 text-3xl font-heading font-bold text-primary md:text-5xl">What Our Clients Say</h2>
               <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
             </div>
           </FadeIn>
@@ -271,21 +270,21 @@ const Index = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="section-padding bg-gradient-to-r from-accent via-accent to-[#c9a030] text-accent-foreground relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-r from-accent via-accent to-accent/80 text-accent-foreground relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,white/15,transparent_50%)]" />
         <div className="container-narrow text-center relative">
           <FadeIn>
             <h2 className="text-3xl font-heading font-bold md:text-5xl">
               Ready to Start Your Business Journey?
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-accent-foreground/80 text-lg">
+            <p className="mx-auto mt-6 max-w-xl text-white/80 text-lg">
               Get expert guidance on company formation, licensing, and business setup in Saudi Arabia. Your first consultation is free.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Button
                 size="lg"
                 onClick={() => setDialogOpen(true)}
-                className="bg-[#0B1F3A] text-white hover:bg-[#0B1F3A]/90 font-heading font-semibold text-base px-10 py-6 rounded-full shadow-xl"
+                className="bg-primary text-white hover:bg-primary/90 font-heading font-semibold text-base px-10 py-6 rounded-full shadow-xl"
               >
                 Get Free Consultation
               </Button>
@@ -293,7 +292,7 @@ const Index = () => {
                 size="lg"
                 asChild
                 variant="outline"
-                className="border-[#0B1F3A]/30 text-[#0B1F3A] hover:bg-[#0B1F3A]/10 font-heading font-semibold text-base px-8 py-6 rounded-full"
+                className="border-primary/30 text-primary hover:bg-primary/10 font-heading font-semibold text-base px-8 py-6 rounded-full"
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>
@@ -306,7 +305,7 @@ const Index = () => {
       <section className="py-12 bg-background border-t border-border/50">
         <div className="container-narrow">
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
-            {["100% Transparent", "Saudi Market Experts", "End-to-End Support", "GCC & India", "Innovation Driven"].map((item) => (
+            {["100% Transparent", "Saudi Market Experts", "End-to-End Support", "GCC & India", "Client First"].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-accent" />
                 <span>{item}</span>

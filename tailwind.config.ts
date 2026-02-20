@@ -51,15 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          foreground: "hsl(var(--gold-foreground))",
+        green: {
+          DEFAULT: "hsl(var(--green))",
+          foreground: "hsl(var(--green-foreground))",
         },
         navy: {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
         },
-        royal: "hsl(var(--royal))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -94,8 +93,8 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(43 72% 52% / 0.3)" },
-          "50%": { boxShadow: "0 0 40px hsl(43 72% 52% / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(152 56% 40% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(152 56% 40% / 0.6)" },
         },
         "grid-flow": {
           "0%": { backgroundPosition: "0 0" },
