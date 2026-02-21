@@ -40,13 +40,13 @@ const Process = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-primary via-secondary to-primary text-white section-padding relative overflow-hidden">
-        <div className="absolute inset-0 tech-grid opacity-20" />
+      <section className="bg-[#EAF3FF] section-padding relative overflow-hidden">
+        <div className="absolute inset-0 tech-grid opacity-10" />
         <div className="container-narrow text-center relative">
           <FadeIn>
-            <h1 className="text-4xl font-heading font-bold md:text-5xl">Our Process</h1>
+            <h1 className="text-4xl font-heading font-bold md:text-5xl text-primary">Our Process</h1>
             <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-accent" />
-            <p className="mx-auto mt-4 max-w-2xl text-white/60 text-lg">
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground text-lg">
               A simple, transparent 4-step journey to launching your business in Saudi Arabia.
             </p>
           </FadeIn>
