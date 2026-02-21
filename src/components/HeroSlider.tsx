@@ -112,9 +112,8 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
                   asChild
-                  className="border-white/20 text-white hover:bg-white/10 font-heading font-semibold text-base px-8 py-6"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-heading font-semibold text-base px-8 py-6 shadow-lg"
                 >
                   <a href="/BridgeOne-Profile.pdf" target="_blank" rel="noopener noreferrer">
                     <Download size={18} className="mr-2" />
