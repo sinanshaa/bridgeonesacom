@@ -108,7 +108,7 @@ export const HeroSlider = ({ onConsultation }: HeroSliderProps) => {
                   asChild
                   className="border border-white/20 bg-white/10 text-white hover:bg-white/20 font-heading font-semibold text-base px-8 py-6 backdrop-blur-sm"
                 >
-                  <Link to="/contact">Contact Us</Link>
+                  <a href="https://wa.me/918943756296?text=Hello%20BridgeOneSA%2C%20I%20am%20interested%20in%20your%20Saudi%20business%20setup%20services.%20Please%20contact%20me." target="_blank" rel="noopener noreferrer">Contact Us</a>
                 </Button>
                 <Button
                   size="lg"

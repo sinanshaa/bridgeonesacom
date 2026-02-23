@@ -12,13 +12,13 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="BridgeOne.Com" className="h-12 w-auto" />
+              <img src={logo} alt="BridgeOneSA.Com" className="h-12 w-auto" />
               <span className="text-xl font-heading font-bold">
-                Bridge<span className="text-accent">One</span>.Com
+                Bridge<span className="text-accent">One</span>SA.Com
               </span>
             </div>
             <p className="text-sm text-white/40 leading-relaxed">
-              Bridging global opportunities with local aspirations. Expert business services across Saudi Arabia, UAE, GCC & India.
+              Bridging global opportunities with local aspirations. Expert business services across Saudi Arabia, UAE, GCC &amp; India.
             </p>
             <div className="mt-6 inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-medium text-accent">
               ✦ Trusted GCC Business Partner
@@ -96,7 +96,7 @@ export const Footer = () => {
 
       <div className="border-t border-white/5">
         <div className="container-narrow py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <span>© {new Date().getFullYear()} BridgeOne.Com — All rights reserved.</span>
+          <span>© {new Date().getFullYear()} BridgeOneSA.Com — All rights reserved.</span>
           <span>Trusted Business Partner in Saudi Arabia, UAE & India</span>
         </div>
       </div>

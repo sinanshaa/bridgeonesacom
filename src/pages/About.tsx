@@ -29,7 +29,7 @@ const About = () => {
               <h2 className="text-3xl font-heading font-bold text-primary">Our Story</h2>
               <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-accent" />
               <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-                BridgeOne is a growing business service company focused on helping entrepreneurs and organizations establish and manage their operations in Saudi Arabia. We provide reliable consulting, documentation support, and digital service solutions to ensure a smooth and compliant business setup experience. Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
+                BridgeOneSA is a growing business service company focused on helping entrepreneurs and organizations establish and manage their operations in Saudi Arabia. We provide reliable consulting, documentation support, and digital service solutions to ensure a smooth and compliant business setup experience. Our approach blends professional consultancy, digital efficiency, and human support — ensuring clients receive accurate guidance and timely execution at every stage.
               </p>
             </div>
           </FadeIn>
@@ -123,6 +123,41 @@ const About = () => {
                     </div>
                   </CardContent>
                 </Card>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Process Section */}
+      <section className="section-padding bg-gradient-to-br from-primary via-secondary to-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 tech-grid opacity-10" />
+        <div className="container-narrow relative">
+          <FadeIn>
+            <div className="text-center max-w-2xl mx-auto">
+              <span className="text-sm font-medium text-accent uppercase tracking-widest">Our Process</span>
+              <h2 className="mt-3 text-3xl font-heading font-bold md:text-5xl">How It Works</h2>
+              <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
+              <p className="mt-4 text-white/50">A simple 4-step journey to your Saudi business</p>
+            </div>
+          </FadeIn>
+          <div className="mt-16 grid gap-8 md:grid-cols-4">
+            {[
+              { num: "01", title: "Free Consultation", desc: "Discuss your goals and get expert advice." },
+              { num: "02", title: "Document Preparation", desc: "We handle all paperwork and filings." },
+              { num: "03", title: "Government Processing", desc: "Approvals, licenses, and registrations." },
+              { num: "04", title: "Business Launch", desc: "Start operating with ongoing support." },
+            ].map((step, i) => (
+              <FadeIn key={step.num} delay={i * 120}>
+                <div className="group text-center relative">
+                  {i < 3 && (
+                    <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent/30 to-transparent" />
+                  )}
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-accent text-accent-foreground font-heading font-bold text-lg shadow-lg shadow-accent/30 transition-all duration-300 group-hover:shadow-accent/50 group-hover:scale-110">
+                    {step.num}
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg">{step.title}</h3>
+                  <p className="mt-2 text-sm text-white/50">{step.desc}</p>
+                </div>
               </FadeIn>
             ))}
           </div>
