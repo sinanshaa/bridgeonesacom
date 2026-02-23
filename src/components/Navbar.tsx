@@ -38,11 +38,11 @@ export const Navbar = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src={logo}
-              alt="BridgeOne.Com"
+              alt="BridgeOneSA.Com"
               className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
             />
             <span className="text-xl font-heading font-bold text-primary">
-              Bridge<span className="text-accent">One</span>.Com
+              Bridge<span className="text-accent">One</span>SA.Com
             </span>
           </Link>
 
